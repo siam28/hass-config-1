@@ -1,14 +1,9 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: 50.895343
-  longitude: -114.097853
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 1091.5
-  # metric for Metric, imperial for Imperial
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Edmonton
 
   #customize must nested within homeassistant entity
@@ -17,33 +12,25 @@ homeassistant:
 # Enables the frontend
 frontend:
 http:
-  # api_password: !secret http_password
+  api_password: !secret http_password
   # base_url: !secret base_url
   # cors_allowed_origins:
   #  - !secret base_origin
-  # use_x_forwarded_for: true
-  # ip_ban_enabled: true
-  # login_attempts_threshold: 7
-  # trusted_networks:
-  #  - 192.168.1.0/24
+  use_x_forwarded_for: true
+  ip_ban_enabled: true
+  login_attempts_threshold: 7
+  trusted_networks:
+  - 192.168.1.0/24
 
-# Checks for available updates
 updater:
-# Auto Discovery
 discovery:
-# Voice commands
 conversation:
-# Enables support for tracking state changes over time.
 history:
-# Retention
 recorder:
   purge_days: 30
-# View all events in a logbook
 logbook:
-# Limit debug info
 logger:
   default: warn
-# Track the sun
 sun:
 
 ###########################################
@@ -63,6 +50,5 @@ group: !include group.yaml
 #emulated_hue: !include emulated_hue.yaml
 #script: !include script.yaml
 
-# Text to speech
-#tts:
-  #platform: google
+tts:
+  platform: google

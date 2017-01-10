@@ -17,38 +17,45 @@ default_view:
     #- media_player.my_shield_console
 
 ###########################################
-# City Tab
+# Local Tab
 ###########################################
-City:
+Local:
   view: yes
-  name: City
+  name: Local
   entities:
     #- camera.glenmore__macleod
     #- camera.glenmore__crowchild
     #- camera.4_ave__9_st
     #- camera.5_ave__7_st
     #- camera.bow__6_ave
+    #- group.travel
     - sun.sun
     - sensor.yr_temperature
     - sensor.yr_humidity
     - sensor.yr_symbol
-    #- group.travel
     - group.forecast
     - group.sun
     - group.date_time
 
+
 ###########################################
-# Debug Tab
+# Network Tab
 ###########################################
-debug:
+Network:
   view: yes
-  name: Debug
+  name: Network
   entities:
-    - group.sunrise_automation
-    #- group.presence_automation
-    #- group.arrival_departure_automation
-    #- group.climate_automation
-    - group.system_status
+
+
+
+###########################################
+# System Tab
+###########################################
+System:
+  view: yes
+  name: System
+  entities:
+
 
 ###########################################
 # Home Cards
@@ -71,7 +78,7 @@ lights:
 
 
 ###########################################
-# Calgary Cards
+# City Cards
 ###########################################
 Date_Time:
   name: "Date & Time"
@@ -114,40 +121,3 @@ System_Status:
     - sensor.hass_installed
     - sensor.sd_free_space
     - automation.update_notification
-
-#Sunrise_Automation:
-  #name: "Sunrise Automation"
-  #entities:
-    #- automation.sunrise_away_lights
-    #- automation.sunset_away_lights
-
-#Presence_Automation:
-  #name: "Presence Automation"
-  #entities:
-    #- automation.off_while_home
-    #- automation.on_while_home
-    #- automation.off_while_away
-    #- automation.on_while_away
-
-#Arrival_Departure_Automation:
-  #name: "Arrival & Departure Automation"
-  #entities:
-    #- automation.patio_off_after_arrival
-    #- automation.patio_on_after_departure
-    #- automation.commute_notification
-
-
-#Climate_Automation:
-  #name: "Climate Automation"
-  #entities:
-    #- automation.heat_on
-    #- automation.heat_off
-
-
-###########################################
-# Hidden Groups
-###########################################
-#family_devices:
-    #- device_tracker.brittanysiphone
-    #- device_tracker.jaredsrotary_ip
-    #- device_tracker.jaredsrotary_bt

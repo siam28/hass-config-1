@@ -9,12 +9,33 @@
   #order: 3
 
 ###########################################
-# City Group Order
+# Local Group Order
 ###########################################
 group.date_time:
   order: 1
 group.system_status:
   order: 2
+
+
+###########################################
+# Network Group Order
+###########################################
+#group.#:
+  #order: 1
+#group.#:
+  #order: 2
+#group.#:
+  #order: 3
+
+###########################################
+# System Group Order
+###########################################
+#group.#:
+  #order: 1
+#group.#:
+  #order: 2
+#group.#:
+  #order: 3
 
 ###########################################
 # Home Sensors
