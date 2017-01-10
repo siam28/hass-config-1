@@ -2,10 +2,10 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: !secret latitude
-  longitude: !secret longitude
+  latitude: 50.895343
+  longitude: -114.097853
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: !secret elevation
+  elevation: 1091.5
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -17,15 +17,15 @@ homeassistant:
 # Enables the frontend
 frontend:
 http:
-  api_password: !secret http_password
+  # api_password: !secret http_password
   # base_url: !secret base_url
   # cors_allowed_origins:
   #  - !secret base_origin
-  use_x_forwarded_for: true
-  ip_ban_enabled: true
-  login_attempts_threshold: 7
-  trusted_networks:
-    - 192.168.1.0/24
+  # use_x_forwarded_for: true
+  # ip_ban_enabled: true
+  # login_attempts_threshold: 7
+  # trusted_networks:
+  #  - 192.168.1.0/24
 
 # Checks for available updates
 updater:
@@ -49,7 +49,7 @@ sun:
 ###########################################
 # Includes
 ###########################################
-climate: !include climate.yaml
+# climate: !include climate.yaml
 #sensor: !include_dir_merge_list sensor
 #switch: !include switch.yaml
 #camera: !include camera.yaml
