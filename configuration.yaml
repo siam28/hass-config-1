@@ -2,50 +2,67 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 53.9167
-  longitude: -122.7667
+  latitude: !secret latitude
+  longitude: !secret longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 591
+  elevation: !secret elevation
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Vancouver
+  time_zone: America/Edmonton
 
-# Show links to resources in log and frontend
-introduction:
+  #customize must nested within homeassistant entity
+  customize: !include customize.yaml
 
 # Enables the frontend
 frontend:
-
 http:
-  # Uncomment this to add a password (recommended!)
-  # api_password: PASSWORD
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
+  api_password: !secret http_password
+  # base_url: !secret base_url
+  # cors_allowed_origins:
+  #  - !secret base_origin
+  use_x_forwarded_for: true
+  ip_ban_enabled: true
+  login_attempts_threshold: 7
+  trusted_networks:
+    - 192.168.1.0/24
 
 # Checks for available updates
 updater:
-
-# Discover some devices automatically
+# Auto Discovery
 discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
+# Voice commands
 conversation:
-
 # Enables support for tracking state changes over time.
 history:
-
+# Retention
+recorder:
+  purge_days: 30
 # View all events in a logbook
 logbook:
-
+# Limit debug info
+logger:
+  default: warn
 # Track the sun
 sun:
 
-# Weather Prediction
-sensor:
-  platform: yr
+###########################################
+# Includes
+###########################################
+climate: !include climate.yaml
+#sensor: !include_dir_merge_list sensor
+#switch: !include switch.yaml
+#camera: !include camera.yaml
+#device_tracker: !include device_tracker.yaml
+group: !include group.yaml
+#notify: !include notify.yaml
+#automation: !include_dir_merge_list automation
+#media_player: !include media_player.yaml
+#panel_iframe: !include panel_iframe.yaml
+#input_select: !include input_select.yaml
+#emulated_hue: !include emulated_hue.yaml
+#script: !include script.yaml
 
 # Text to speech
-tts:
-  platform: google
-
+#tts:
+  #platform: google
