@@ -23,7 +23,7 @@ http:
   - 192.168.1.0/24
 
 updater:
-discovery:
+# discovery:
 conversation:
 history:
 recorder:
@@ -34,14 +34,40 @@ logger:
 sun:
 
 ###########################################
+# Components
+###########################################
+wink:
+  access_token: !secret wink_token
+
+light:
+  platform: hue
+  host: !secret hue_address
+
+emulated_hue:
+  host_ip: !secret hue_address
+  listen_port: 8300
+  off_maps_to_on_domains:
+    - script
+    - scene
+  expose_by_default: false
+
+media_player:
+  - platform: plex
+
+remote:
+  - platform: harmony
+    name: Living Room
+    host: !secret harmony_address
+
+###########################################
 # Includes
 ###########################################
 climate: !include climate.yaml
-#sensor: !include_dir_merge_list sensor
-#switch: !include switch.yaml
+sensor: !include_dir_merge_list sensor
+switch: !include switch.yaml
+group: !include group.yaml
 #camera: !include camera.yaml
 #device_tracker: !include device_tracker.yaml
-group: !include group.yaml
 #notify: !include notify.yaml
 #automation: !include_dir_merge_list automation
 #media_player: !include media_player.yaml

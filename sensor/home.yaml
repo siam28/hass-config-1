@@ -1,0 +1,19 @@
+###########################################
+# Home Sensors
+###########################################
+
+- platform: sonarr
+  api_key: !secret sonarr_api
+  host: !secret sonarr_address
+  port: !secret sonarr_port
+  monitored_conditions:
+  - upcoming
+  days: 1
+
+# - platform: nzbget
+  # host: !secret nzbget_address
+  # port: 6789
+  # username: !secret nzbget_username
+  # password: !secret nzbget_password
+  # monitored_variables:
+  # - download_rate

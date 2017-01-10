@@ -1,0 +1,14 @@
+###########################################
+# Travel Sensors
+###########################################
+- platform: google_travel_time
+  name: Home to Downtown
+  api_key: !secret google_maps
+  origin: zone.home
+  destination: !secret downtown_address
+
+- platform: google_travel_time
+  name: Home to Stoddard's
+  api_key: !secret google_maps
+  origin: zone.home
+  destination: !secret stoddard_address
