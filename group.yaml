@@ -11,15 +11,15 @@ default_view:
     #- sensor.family_room_thermostat_nest_temperature
     #- sensor.co2
     #- sensor.scale
-    #- group.lights
-    #- group.media
+    - group.lights
+    - group.media
     #- climate.family_room_nest
     #- media_player.my_shield_console
 
 ###########################################
 # City Tab
 ###########################################
-Calgary:
+City:
   view: yes
   name: City
   entities:
