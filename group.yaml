@@ -4,17 +4,12 @@
 default_view:
   view: yes
   entities:
-    #- device_tracker.brittanysiphone
-    #- device_tracker.jaredsrotary_ip
-    # sensor.climate_operation_mode
-    #- sensor.family_room_thermostat_nest_humidity
-    #- sensor.family_room_thermostat_nest_temperature
-    #- sensor.co2
-    #- sensor.scale
     - group.lights
+    - group.climate
     - group.media
-    #- climate.family_room_nest
-    #- media_player.my_shield_console
+    - group.tv_shedule
+    - cover.garage_door
+
 
 ###########################################
 # Local Tab
@@ -23,29 +18,24 @@ Local:
   view: yes
   name: Local
   entities:
-    #- camera.glenmore__macleod
-    #- camera.glenmore__crowchild
-    #- camera.4_ave__9_st
-    #- camera.5_ave__7_st
-    #- camera.bow__6_ave
-    #- group.travel
+    - group.forecast
+    - group.sun
+    - group.date_time
+    - group.traffic
     - sun.sun
     - sensor.yr_temperature
     - sensor.yr_humidity
     - sensor.yr_symbol
-    - group.forecast
-    - group.sun
-    - group.date_time
+
 
 
 ###########################################
 # Network Tab
 ###########################################
-Network:
-  view: yes
-  name: Network
-  entities:
-
+#Network:
+#  view: yes
+#  name: Network
+#  entities:
 
 
 ###########################################
@@ -61,22 +51,24 @@ System:
 # Home Cards
 ###########################################
 
-Media:
-  entities:
-   #- sensor.current_activity
-   #- input_select.harmony
-   #- switch.livingroomtv
-   #- switch.shieldtv
-   #- sensor.tv_schedule
-
 lights:
   entities:
-   #- switch.front_door
-   #- switch.patio
-   #- switch.bedroom
-   #- switch.wemo_insight
+   - light.jordans_light
+   - light.pauls_light
+   - light.beths_light
 
+climate:
+  entities:
+    - sensor.living_room_temperature
+    - sensor.office_temperature
+    - sensor.jordans_room_temperature
+    - sensor.bedroom_temperature
+    - sensor.basement_temperature
 
+media:
+  entities:
+    - sensor.tv_schedule
+    
 ###########################################
 # Local Cards
 ###########################################
@@ -86,8 +78,14 @@ Date_Time:
     - sensor.date
     - sensor.time
 
-#Travel:
-  #entities:
+Traffic:
+  name: "Traffic"
+  entities:
+    - camera.glenmore__macleod
+    - camera.glenmore__crowchild
+    - camera.4_ave__9_st
+    - camera.5_ave__7_st
+    - camera.bow__6_ave
     #- sensor.home_to_core
     #- sensor.home_to_stoddards
 
@@ -102,6 +100,13 @@ Date_Time:
 #   - sensor.dark_sky_precip_probability
 #   - sensor.pws_precip_today_metric
 #   - sensor.pws_wind_kph
+
+Sun:
+  name: "Sunset & Sunrise"
+  entities:
+    - sensor.solar_angle
+    - sensor.sunrise
+    - sensor.sunset
 
 ###########################################
 # System Cards
