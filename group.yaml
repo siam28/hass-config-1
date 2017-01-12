@@ -11,6 +11,7 @@ default_view:
     - group.rooms
     - group.tv_shedule
     - group.security
+    - group.media
     - sun.sun    
     - sensor.yr_temperature
     - sensor.yr_symbol
