@@ -4,11 +4,17 @@
 - platform: google_travel_time
   name: Home to Downtown
   api_key: !secret google_maps
-  origin: zone.home
+  origin: !secret home_address
   destination: !secret downtown_address
+
+- platform: google_travel_time
+  name: Home to Airport
+  api_key: !secret google_maps
+  origin: !secret home_address
+  destination: !secret yyc_airport
 
 - platform: google_travel_time
   name: Home to Stoddard's
   api_key: !secret google_maps
-  origin: zone.home
+  origin: !secret home_address
   destination: !secret stoddard_address

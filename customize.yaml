@@ -11,8 +11,27 @@
 ###########################################
 # Local Group Order
 ###########################################
-group.date_time:
+group.climate:
   order: 1
+group.rooms:
+  order: 2
+group.security:
+  order: 3
+group.lights:
+  order: 4  
+group.travel:
+  order: 5
+
+
+###########################################
+# Media Group Order
+###########################################
+#group.#:
+  #order: 1
+#group.#:
+  #order: 2
+#group.#:
+  #order: 3
 
 
 ###########################################
@@ -38,7 +57,45 @@ group.system_status:
 ###########################################
 # Home Sensors
 ###########################################
+sensor.bedroom_temperature:
+  friendly_name: 'Bedroom'
+  icon: mdi:hotel
+sensor.basement_temperature:
+  friendly_name: 'Basement'
+  icon: mdi:sofa  
+sensor.living_room_temperature:
+  friendly_name: 'Living Room'
+  icon: mdi:sofa
+sensor.jordans_room_temperature:
+  friendly_name: 'Jordan'
+  icon: mdi:hotel  
+sensor.office_temperature:
+  friendly_name: 'Office'
+  icon: mdi:desktop-mac
+light.pauls_light:
+  friendly_name: 'Paul'
+light.beths_light:
+  friendly_name: 'Beth'
+light.jordans_light:
+  friendly_name: 'Jordan'
+#light.notify:
+#  friendly_name: 'Notify'   
+light.hgrp0000000014:
+  friendly_name: 'Family Room'
+  icon: mdi:sofa    
+cover.garage_door:
+  friendly_name: 'Garage'
+  icon: mdi:car
 
+###########################################
+# Media Sensors
+###########################################
+
+sensor.tv_schedule:
+  friendly_name: 'TV Today'
+  icon: mdi:movie
+sensor.current_activity:
+  icon: mdi:play-pause
 
 ###########################################
 # Weather Sensors
@@ -82,6 +139,16 @@ sensor.sunset:
 sensor.air_quality:
   friendly_name: "Air Quality"
   icon: mdi:hospital
+
+###########################################
+# Travel Sensors
+###########################################
+sensor.home_to_downtown:
+  icon: mdi:car
+sensor.home_to_airport:
+  icon: mdi:car  
+sensor.home_to_stoddards:
+  icon: mdi:car
 
 
 ###########################################

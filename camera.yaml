@@ -2,17 +2,17 @@
 # Traffic Cams
 ###########################################
 - platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc3.jpg
+  name: '162 Avenue / Macleod Trail S'
+- platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc11.jpg
+  name: '149 Avenue / Macleod Trail S'
+- platform: generic
   still_image_url: http://trafficcam.calgary.ca/loc15.jpg
-  name: 'Glenmore & Crowchild'
+  name: 'Glenmore Trail / Crowchild Trail SW'
 - platform: generic
-  still_image_url: http://trafficcam.calgary.ca/loc27.jpg
-  name: 'Glenmore & Macleod'
+  still_image_url: http://trafficcam.calgary.ca/loc48.jpg
+  name: 'Southland Drive / Macleod Trail S'
 - platform: generic
-  still_image_url: http://trafficcam.calgary.ca/loc56.jpg
-  name: 'Bow & 6 Ave'
-- platform: generic
-  still_image_url: http://trafficcam.calgary.ca/loc5.jpg
-  name: '4 Ave & 9 St'
-- platform: generic
-  still_image_url: http://trafficcam.calgary.ca/loc75.jpg
-  name: '5 Ave & 7 St'
+  still_image_url: http://trafficcam.calgary.ca/loc8.jpg
+  name: 'Heritage Drive / Macleod Trail S'
