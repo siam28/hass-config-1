@@ -9,9 +9,7 @@ default_view:
     - group.climate
     - group.travel
     - group.rooms
-    - group.tv_shedule
     - group.security
-    - group.media
     - sun.sun    
     - sensor.yr_temperature
     - sensor.yr_symbol
@@ -19,7 +17,7 @@ default_view:
 ###########################################
 # Local Tab
 ###########################################
-Local:
+local:
   icon: mdi:city
   view: yes
   name: Local
@@ -39,7 +37,7 @@ Local:
 media:
   icon: mdi:television-guide
   view: yes
-  name: Network
+  name: Media
   entities:
     - media_player.living_room
     - sensor.tv_schedule

@@ -1,5 +1,9 @@
+###########################################
+# TV Sensors
+###########################################
 - platform: template
   sensors: 
+  name: 'TV Schedule'
     tv_schedule:
       value_template: >-
         {%- for attr in states.sensor.sonarr_upcoming.attributes -%}

@@ -4,9 +4,13 @@
 - platform: api_streams
 
 - platform: command_line
-  command: "pip3 show homeassistant | grep -w \"Version:\" | cut -d : -f2 | sed -e 's/[ \t]*//'"
+  command: "pip show homeassistant | grep -w \"^Version:\" | cut -d : -f2 | sed -e 's/^[ \t]*//'"
   name: 'HASS Installed'
   scan_interval: 60
+
+- platform: command_line
+  name: 'Bad Login'
+  command: "grep -c 'Login attempt' home-assistant.log"
 
 - platform: rest
   resource: https://api.github.com/repos/home-assistant/home-assistant/releases/latest
@@ -67,3 +71,4 @@
         {% else %}
             n/a
         {%- endif -%}
+
