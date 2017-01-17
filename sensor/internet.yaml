@@ -1,0 +1,31 @@
+###########################################
+# Speedtest
+###########################################
+- platform: speedtest
+  minute:
+  - 0
+  - 30
+  monitored_conditions:
+  - ping
+  - download
+  - upload
+
+###########################################
+# Download Sensors
+###########################################
+
+- platform: sonarr
+  api_key: !secret sonarr_api
+  host: !secret sonarr_address
+  port: !secret sonarr_port
+  monitored_conditions:
+  - upcoming
+  days: 1
+
+- platform: nzbget
+  host: !secret nzbget_address
+  port: !secret nzbget_port
+  username: !secret nzbget_username
+  password: !secret nzbget_password
+  monitored_variables:
+  - download_rate

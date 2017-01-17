@@ -1,33 +1,36 @@
 ###########################################
 # Home Group Order
 ###########################################
-#group.#:
-  #order: 1
-#group.#:
-  #order: 2
-#group.#:
-  #order: 3
-
-###########################################
-# Local Group Order
-###########################################
 group.climate:
   order: 1
 group.rooms:
   order: 2
-group.security:
+group.occupancy:
   order: 3
+group.security:
+  order: 4
 group.lights:
-  order: 4  
+  order: 5  
+
+
+###########################################
+# Local Group Order
+###########################################
 group.travel:
-  order: 5
+  order: 1
+group.sun:
+  order: 2  
+group.forecast:
+  order: 3
+group.traffic:
+  order: 4
 
 
 ###########################################
 # Media Group Order
 ###########################################
-#group.#:
-  #order: 1
+group.entertainment:
+  order: 1
 #group.#:
   #order: 2
 #group.#:
@@ -49,14 +52,18 @@ group.travel:
 ###########################################
 group.system_status:
   order: 1
-#group.#:
-  #order: 2
-#group.#:
-  #order: 3
+group.speedtest:
+  order: 2
+group.downloads:
+  order: 3
+group.hubs:
+  order: 4
 
 ###########################################
 # Home Sensors
 ###########################################
+climate.main_floor:
+  friendly_name: 'Thermostat'
 sensor.bedroom_temperature:
   friendly_name: 'Bedroom'
   icon: mdi:hotel
@@ -78,14 +85,32 @@ light.beths_light:
   friendly_name: 'Beth'
 light.jordans_light:
   friendly_name: 'Jordan'
-#light.notify:
-#  friendly_name: 'Notify'   
+light.notify:
+  friendly_name: 'Notify'   
 light.hgrp0000000014:
   friendly_name: 'Family Room'
   icon: mdi:sofa    
 cover.garage_door:
   friendly_name: 'Garage'
   icon: mdi:car
+binary_sensor.basement_occupancy:
+  friendly_name: 'Basement'
+  icon: mdi:sofa  
+binary_sensor.bedroom_occupancy:
+  friendly_name: 'Bedroom'
+  icon: mdi:hotel
+binary_sensor.jordans_room_occupancy:
+  friendly_name: 'Jordan'
+  icon: mdi:hotel
+binary_sensor.living_room_occupancy:
+  friendly_name: 'Living Room'
+  icon: mdi:sofa
+binary_sensor.main_floor_occupancy:
+  friendly_name: 'Main Floor'
+  icon: mdi:home
+binary_sensor.office_occupancy:
+  friendly_name: 'Office'
+  icon: mdi:desktop-mac
 
 ###########################################
 # Media Sensors
@@ -93,9 +118,16 @@ cover.garage_door:
 
 sensor.tv_schedule:
   friendly_name: 'TV Today'
-  icon: mdi:movie
+  icon: mdi:television
 sensor.current_activity:
   icon: mdi:play-pause
+sensor.now_playing:
+  icon: mdi:play-circle
+sensor.plex:
+  friendly_name: 'Plex Activity'
+  icon: mdi:plex
+input_select.harmony:
+  icon: mdi:remote
 
 ###########################################
 # Weather Sensors
@@ -121,7 +153,7 @@ sensor.air_pressure_template:
 sensor.pws_feelslike_c:
   friendly_name: 'Feels Like'
   icon: mdi:human-male-female
-sensor.pws_uv:
+sensor.uv_rating_template:
   friendly_name: 'UV Level'
   icon: mdi:sunglasses
 sensor.pws_wind_kph:
@@ -137,7 +169,7 @@ sensor.sunrise:
 sensor.sunset:
   icon: mdi:weather-sunset-down
 sensor.air_quality:
-  friendly_name: "Air Quality"
+  friendly_name: 'Air Quality'
   icon: mdi:hospital
 
 ###########################################
@@ -154,6 +186,25 @@ sensor.home_to_stoddards:
 ###########################################
 # System
 ###########################################
+binary_sensor.philips_hue_hub:
+  friendly_name: 'Philips Hue'
+binary_sensor.wink_hub:
+  friendly_name: 'Wink'
+  
+sensor.speedtest_download:
+  friendly_name: 'Download'
+  icon: mdi:cloud-download
+sensor.speedtest_upload:
+  friendly_name: 'Upload'
+  icon: mdi:cloud-upload
+sensor.speedtest_ping:
+  friendly_name: 'Ping'
+  icon: mdi:dots-horizontal
+
+sensor.nzbget:
+  friendly_name: 'NZBGet'
+  icon: mdi:arrow-down-bold-circle
+
 sensor.connected_clients:
   friendly_name: 'Connections'
   icon: mdi:lan-connect

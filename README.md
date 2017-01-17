@@ -8,13 +8,13 @@
 * v0.2 - Sensor Data
 * v0.3 - Added Components (Wink, Hue, Harmony, Plex)
 * v0.4 - Groups/Tabs, Cleanup
+* v0.5 - Speedtest, Synology, Sonarr, NZBGet and Hubs
+
 
 ## Issues
 
-* Plex not working
-* Sonarr not showing
-
-
+* spaces Paul, not tabs...
+*
 
 ## Acknowledgments
 
