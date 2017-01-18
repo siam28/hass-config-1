@@ -1,0 +1,27 @@
+###########################################
+# Doppler Radar
+###########################################
+
+- platform: generic
+  still_image_url: http://weatherplaza.com/Content/maps/sat-canada-map.gif
+  name: 'radar'
+  friendly_name: 'Radar'
+
+###########################################
+# Traffic Cams
+###########################################
+- platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc3.jpg
+  name: '162 Avenue / Macleod Trail S'
+- platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc11.jpg
+  name: '149 Avenue / Macleod Trail S'
+- platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc15.jpg
+  name: 'Glenmore Trail / Crowchild Trail SW'
+- platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc48.jpg
+  name: 'Southland Drive / Macleod Trail S'
+- platform: generic
+  still_image_url: http://trafficcam.calgary.ca/loc8.jpg
+  name: 'Heritage Drive / Macleod Trail S'

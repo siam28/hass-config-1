@@ -1,0 +1,72 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: metric
+  time_zone: America/Edmonton
+
+  #customize must nested within homeassistant entity
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend:
+http:
+  api_password: !secret http_password
+  # base_url: !secret base_url
+  # cors_allowed_origins:
+  #  - !secret base_origin
+  use_x_forwarded_for: true
+  ip_ban_enabled: true
+  login_attempts_threshold: 7
+  trusted_networks:
+  - 192.168.1.0/24
+
+updater:
+discovery:
+conversation:
+history:
+recorder:
+  purge_days: 30
+logbook:
+logger:
+  default: warn
+sun:
+
+###########################################
+# Components
+###########################################
+wink:
+  access_token: !secret wink_token
+
+ecobee:
+  api_key: !secret ecobee_token
+
+light:
+  platform: hue
+  host: !secret hue_address
+
+remote:
+  - platform: harmony
+    name: Living Room
+    host: !secret harmony_address
+tts:
+  platform: google
+
+###########################################
+# Includes
+###########################################
+sensor: !include_dir_merge_list sensor
+switch: !include switch.yaml
+group: !include group.yaml
+camera: !include camera.yaml
+media_player: !include media_player.yaml
+input_select: !include input_select.yaml
+#emulated_hue: !include emulated_hue.yaml
+#device_tracker: !include device_tracker.yaml
+#notify: !include notify.yaml
+#automation: !include_dir_merge_list automation
+#panel_iframe: !include panel_iframe.yaml
+#script: !include script.yaml
+
+

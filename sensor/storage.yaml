@@ -1,0 +1,20 @@
+###########################################
+# Synology DSM
+###########################################
+sensor:
+- platform: synologydsm
+  host: !secret nas_address
+  username: !secret nas_username
+  password: !secret nas_password
+  monitored_conditions:
+    - disk_name
+    - disk_device
+    - disk_smart_status
+    - disk_status
+    - cpu_total_load
+    - memory_real_usage
+    - network_up
+    - volume_status
+    - volume_device_type
+    - volume_size_total
+    - volume_size_used
