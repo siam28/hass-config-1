@@ -57,6 +57,7 @@ system:
 # Home Cards
 ###########################################
 lights:
+<<<<<<< HEAD
   icon: mdi:lightbulb
   control: hidden
   entities:
@@ -68,6 +69,17 @@ lights:
 
 climate:
   icon: mdi:oil-temperature
+=======
+  control: hidden
+  entities:
+   - light.hgrp0000000014
+   - light.jordans_light
+   - light.pauls_light
+   - light.beths_light
+   - light.notify
+
+climate:
+>>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
   entities:
     - climate.main_floor
     - sensor.main_floor_temperature
@@ -80,7 +92,10 @@ climate:
 
 occupancy:
   entities:
+<<<<<<< HEAD
   icon: mdi:person
+=======
+>>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
     - binary_sensor.living_room_occupancy
     - binary_sensor.main_floor_occupancy
     - binary_sensor.office_occupancy
@@ -89,7 +104,10 @@ occupancy:
     - binary_sensor.basement_occupancy
 
 security:
+<<<<<<< HEAD
   icon: mdi:glassdoor
+=======
+>>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
   name: "Doors & Windows"
   entities:
     - cover.garage_door
@@ -117,6 +135,7 @@ traffic:
     - camera.heritage_drive__macleod_trail_s
     - camera.glenmore_trail__crowchild_trail_sw
 
+<<<<<<< HEAD
 forecast:
   entities:
     - sensor.pws_feelslike_c
@@ -129,6 +148,21 @@ forecast:
     - sensor.pws_precip_today_metric
     - sensor.pws_wind_kph
     - camera.radar
+=======
+
+forecast:
+  entities:
+   - sensor.pws_feelslike_c
+   - sensor.dark_sky_daily_low_temperature
+   - sensor.dark_sky_daily_high_temperature
+   - sensor.air_pressure_template
+   - sensor.air_quality
+   - sensor.uv_rating_template
+   - sensor.dark_sky_precip_probability
+   - sensor.pws_precip_today_metric
+   - sensor.pws_wind_kph
+   - camera.yyc
+>>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
 
 sun:
   name: "Sunset & Sunrise"
@@ -148,6 +182,10 @@ entertainment:
     - sensor.tv_schedule
     - sensor.now_playing
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
 ###########################################
 # System Cards
 ###########################################
