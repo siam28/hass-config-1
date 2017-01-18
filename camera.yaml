@@ -3,14 +3,9 @@
 ###########################################
 
 - platform: generic
-<<<<<<< HEAD
   still_image_url: http://weatherplaza.com/Content/maps/sat-canada-map.gif
   name: 'radar'
   friendly_name: 'Radar'
-=======
-  still_image_url: http://weatherplaza.com/Content/maps/sat-canada-map.gif 
-  name: 'YYC'
->>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
 
 ###########################################
 # Traffic Cams
@@ -30,8 +25,3 @@
 - platform: generic
   still_image_url: http://trafficcam.calgary.ca/loc8.jpg
   name: 'Heritage Drive / Macleod Trail S'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3cce068634a8251a4ea53d60fe122927c3ff3166
