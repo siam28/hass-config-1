@@ -4,25 +4,17 @@
 - platform: api_streams
 
 - platform: command_line
-  command: "pip3 show homeassistant | grep -w \"^Version:\" | cut -d : -f2 | sed -e 's/^[ \t]*//'"
+  command: "/srv/homeassistant/homeassistant_venv/bin/hass --version"
   name: 'HASS Installed'
   scan_interval: 60
 
 - platform: command_line
-  name: 'Bad Login'
-  command: "ggrep -c 'Login attempt' /home/homeassistant/.homeassistant/home-assistant.log"
+  name: Login Attempts
+  command: "grep -c 'Login attempt' /home/homeassistant/.homeassistant/home-assistant.log"
 
-- platform: rest
-  resource: https://api.github.com/repos/home-assistant/home-assistant/releases/latest
-  username: !secret email_account
-  password: !secret github_token
-  authentication: basic
-  value_template: '{{ value_json.tag_name }}'
-  name: 'HASS Release'
-  headers:
-    Accept: application/vnd.github.v3+json
-    Content-Type: application/json
-    User-Agent: Home Assistant REST sensor
+-  platform: command_line
+   command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+   name: HASS Release
 
 - platform: command_line
   command: "df -h | grep root | awk '{print $4}'"
@@ -71,4 +63,3 @@
         {% else %}
             n/a
         {%- endif -%}
-

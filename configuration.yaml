@@ -30,28 +30,22 @@ recorder:
   purge_days: 30
 logbook:
 logger:
-  default: warn
+  default: warning
 sun:
 
 ###########################################
 # Components
 ###########################################
-wink:
-  access_token: !secret wink_token
 
 ecobee:
   api_key: !secret ecobee_token
-
 light:
   platform: hue
   host: !secret hue_address
-
-remote:
-  - platform: harmony
-    name: Living Room
-    host: !secret harmony_address
 tts:
   platform: google
+wink:
+  access_token: !secret wink_token
 
 ###########################################
 # Includes
@@ -61,12 +55,10 @@ switch: !include switch.yaml
 group: !include group.yaml
 camera: !include camera.yaml
 media_player: !include media_player.yaml
-input_select: !include input_select.yaml
+#input_select: !include input_select.yaml
 #emulated_hue: !include emulated_hue.yaml
 #device_tracker: !include device_tracker.yaml
 #notify: !include notify.yaml
 #automation: !include_dir_merge_list automation
 #panel_iframe: !include panel_iframe.yaml
 #script: !include script.yaml
-
-

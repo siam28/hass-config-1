@@ -16,7 +16,7 @@ default_view:
 ###########################################
 # Local Tab
 ###########################################
-local:
+Local:
   icon: mdi:city
   view: yes
   name: Local
@@ -33,7 +33,7 @@ local:
 ###########################################
 # Media Tab
 ###########################################
-media:
+Media:
   icon: mdi:television-guide
   view: yes
   name: Media
@@ -43,7 +43,7 @@ media:
 ###########################################
 # System Tab
 ###########################################
-system:
+System:
   icon: mdi:settings
   view: yes
   name: System
@@ -56,7 +56,8 @@ system:
 ###########################################
 # Home Cards
 ###########################################
-lights:
+Lights:
+  name: "Lights"
   icon: mdi:lightbulb
   control: hidden
   entities:
@@ -66,7 +67,8 @@ lights:
     - light.beths_light
     - light.notify
 
-climate:
+Climate:
+  name: "Climate"
   icon: mdi:oil-temperature
   entities:
     - climate.main_floor
@@ -78,9 +80,10 @@ climate:
     - sensor.bedroom_temperature
     - sensor.basement_temperature
 
-occupancy:
-  entities:
+Occupancy:
+  name: "Occupancy"
   icon: mdi:person
+  entities:
     - binary_sensor.living_room_occupancy
     - binary_sensor.main_floor_occupancy
     - binary_sensor.office_occupancy
@@ -88,9 +91,9 @@ occupancy:
     - binary_sensor.jordans_room_occupancy
     - binary_sensor.basement_occupancy
 
-security:
-  icon: mdi:glassdoor
+Security:
   name: "Doors & Windows"
+  icon: mdi:glassdoor
   entities:
     - cover.garage_door
 
@@ -103,13 +106,13 @@ date_time:
     - sensor.date
     - sensor.time
 
-travel:
+Travel:
   entities:
     - sensor.home_to_downtown
     - sensor.home_to_airport
     - sensor.home_to_stoddards
 
-traffic:
+Traffic:
   entities:
     - camera.162_avenue__macleod_trail_s
     - camera.149_avenue__macleod_trail_s
@@ -117,7 +120,7 @@ traffic:
     - camera.heritage_drive__macleod_trail_s
     - camera.glenmore_trail__crowchild_trail_sw
 
-forecast:
+Forecast:
   entities:
     - sensor.pws_feelslike_c
     - sensor.dark_sky_daily_low_temperature
@@ -128,9 +131,9 @@ forecast:
     - sensor.dark_sky_precip_probability
     - sensor.pws_precip_today_metric
     - sensor.pws_wind_kph
-    - camera.radar
+#    - camera.radar
 
-sun:
+Sun:
   name: "Sunset & Sunrise"
   entities:
     - sensor.solar_angle
@@ -140,10 +143,11 @@ sun:
 ###########################################
 # Media Cards
 ###########################################
-entertainment:
+Entertainment:
   entities:
-    - input_select.harmony
+#    - input_select.harmony
     - media_player.living_room
+    - media_player.living_room_2
     - sensor.plex
     - sensor.tv_schedule
     - sensor.now_playing
@@ -152,23 +156,28 @@ entertainment:
 # System Cards
 ###########################################
 
-hubs:
+Hubs:
   name: "Hubs"
   entities:
     - binary_sensor.philips_hue_hub
     - binary_sensor.wink_hub
 
-speedtest:
+Speedtest:
   name: "Internet"
   entities:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
 
-downloads:
+Downloads:
   name: "Downloads"
   entities:
-    - sensor.nzbget
+    - sensor.nzbget_average_speed
+    - sensor.nzbget_download_paused
+    - sensor.nzbget_post_processing_paused
+    - sensor.nzbget_uptime
+    - sensor.sonarr_queue
+    - sensor.sonarr_wanted
 
 system_status:
   name: "System Status"
@@ -178,4 +187,5 @@ system_status:
     - sensor.hass_release
     - sensor.hass_installed
     - sensor.sd_free_space
-    - updater.updater
+#    - updater.updater
+    - sensor.bad_login

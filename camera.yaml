@@ -2,10 +2,10 @@
 # Doppler Radar
 ###########################################
 
-- platform: generic
-  still_image_url: http://weatherplaza.com/Content/maps/sat-canada-map.gif
-  name: 'radar'
-  friendly_name: 'Radar'
+#- platform: generic
+#  still_image_url: http://weatherplaza.com/Content/maps/sat-canada-map.gif
+#  name: 'radar'
+#  friendly_name: 'Radar'
 
 ###########################################
 # Traffic Cams

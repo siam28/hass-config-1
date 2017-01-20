@@ -10,7 +10,7 @@ group.occupancy:
 group.security:
   order: 4
 group.lights:
-  order: 5  
+  order: 5
 
 
 ###########################################
@@ -19,7 +19,7 @@ group.lights:
 group.travel:
   order: 1
 group.sun:
-  order: 2  
+  order: 2
 group.forecast:
   order: 3
 group.traffic:
@@ -69,13 +69,13 @@ sensor.bedroom_temperature:
   icon: mdi:hotel
 sensor.basement_temperature:
   friendly_name: 'Basement'
-  icon: mdi:sofa  
+  icon: mdi:sofa
 sensor.living_room_temperature:
   friendly_name: 'Living Room'
   icon: mdi:sofa
 sensor.jordans_room_temperature:
   friendly_name: 'Jordan'
-  icon: mdi:hotel  
+  icon: mdi:hotel
 sensor.office_temperature:
   friendly_name: 'Office'
   icon: mdi:desktop-mac
@@ -86,16 +86,16 @@ light.beths_light:
 light.jordans_light:
   friendly_name: 'Jordan'
 light.notify:
-  friendly_name: 'Notify'   
+  friendly_name: 'Notify'
 light.hgrp0000000014:
   friendly_name: 'Family Room'
-  icon: mdi:sofa    
+  icon: mdi:sofa
 cover.garage_door:
   friendly_name: 'Garage'
   icon: mdi:car
 binary_sensor.basement_occupancy:
   friendly_name: 'Basement'
-  icon: mdi:sofa  
+  icon: mdi:sofa
 binary_sensor.bedroom_occupancy:
   friendly_name: 'Bedroom'
   icon: mdi:hotel
@@ -178,7 +178,7 @@ sensor.air_quality:
 sensor.home_to_downtown:
   icon: mdi:car
 sensor.home_to_airport:
-  icon: mdi:car  
+  icon: mdi:car
 sensor.home_to_stoddards:
   icon: mdi:car
 
@@ -190,7 +190,7 @@ binary_sensor.philips_hue_hub:
   friendly_name: 'Philips Hue'
 binary_sensor.wink_hub:
   friendly_name: 'Wink'
-  
+
 sensor.speedtest_download:
   friendly_name: 'Download'
   icon: mdi:cloud-download
@@ -201,9 +201,28 @@ sensor.speedtest_ping:
   friendly_name: 'Ping'
   icon: mdi:dots-horizontal
 
-sensor.nzbget:
-  friendly_name: 'NZBGet'
+sensor.nzbget_speed:
+  friendly_name: 'Download Speed'
   icon: mdi:arrow-down-bold-circle
+sensor.nzbget_average_speed:
+  friendly_name: 'Average Download Speed'
+  icon: mdi:arrow-down-bold-circle
+sensor.nzbget_download_paused:
+  friendly_name: 'Download Paused'
+  icon: mdi:pause-circle
+sensor.nzbget_post_processing_paused:
+  friendly_name: 'Download Post Paused'
+  icon: mdi:pause-circle
+sensor.nzbget_download_size:
+  friendly_name: 'Download Size'
+  icon: mdi:file-cloud
+sensor.nzbget_remaining_size:
+  friendly_name: 'Remaining Size'
+  icon: mdi:file-cloud
+sensor.nzbget_uptime:
+  friendly_name: 'NZBGet Uptime'
+  icon: mdi:timer
+
 
 sensor.connected_clients:
   friendly_name: 'Connections'
@@ -219,3 +238,6 @@ sensor.sd_free_space:
 sensor.since_last_boot_templated:
   friendly_name: "Uptime"
   icon: mdi:timer
+sensor.login_attempts:
+  friendly_name: "Login Attempts"
+  icon: mdi:account-off

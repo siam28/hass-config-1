@@ -1,0 +1,28 @@
+###########################################
+# Download Sensors
+###########################################
+
+- platform: sonarr
+  api_key: !secret sonarr_api
+  host: !secret sonarr_address
+  port: !secret sonarr_port
+  monitored_conditions:
+  - upcoming
+  - wanted
+  - queue
+  days: 1
+
+- platform: nzbget
+  host: !secret nzbget_host
+  port: !secret nzbget_port
+  monitored_variables:
+  - download_rate
+  - article_cache
+  - average_download_rate
+  - download_paused
+  - download_rate
+  - download_size
+  - free_disk_space
+  - post_paused
+  - remaining_size
+  - uptime
