@@ -1,9 +1,10 @@
 ###########################################
 # Synology DSM
 ###########################################
-sensor:
+
 - platform: synologydsm
   host: !secret nas_address
+  port: !secret nas_port
   username: !secret nas_username
   password: !secret nas_password
   monitored_conditions:

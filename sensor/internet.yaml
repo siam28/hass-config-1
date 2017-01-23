@@ -9,3 +9,14 @@
   - ping
   - download
   - upload
+
+
+###########################################
+# Fast.com
+###########################################
+#  - platform: fastdotcom
+#    minute:
+#      - 0
+#      - 30
+
+# try sensor.update_fastdotcom sometime

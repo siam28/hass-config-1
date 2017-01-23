@@ -1,0 +1,4 @@
+joaoapps_join:
+  - name: all
+    device_id: group.all
+    api_key: !secret join_api

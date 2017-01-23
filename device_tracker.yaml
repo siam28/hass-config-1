@@ -1,0 +1,9 @@
+- platform: unifi
+  track_new_devices: yes
+  interval_seconds: 12
+  consider_home: 130
+  host: !secret unifi_ip
+  port: 8443
+  username: !secret unifi_username
+  password: !secret unifi_password
+# - platform: bluetooth_tracker

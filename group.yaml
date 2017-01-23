@@ -7,6 +7,8 @@ default_view:
   entities:
     - group.lights
     - group.climate
+    - group.calendar
+    - group.holiday
     - group.occupancy
     - group.security
     - sun.sun
@@ -17,7 +19,7 @@ default_view:
 # Local Tab
 ###########################################
 Local:
-  icon: mdi:city
+  icon: mdi:domain
   view: yes
   name: Local
   entities:
@@ -34,11 +36,25 @@ Local:
 # Media Tab
 ###########################################
 Media:
-  icon: mdi:television-guide
+  icon: mdi:theater
   view: yes
   name: Media
   entities:
     - group.entertainment
+    - media_player.living_room
+    - media_player.living_room_2
+
+###########################################
+# Security Tab
+###########################################
+Security:
+  icon: mdi:security-home
+  view: yes
+  name: Security
+  entities:
+    - group.access
+    - group.protect
+
 
 ###########################################
 # System Tab
@@ -49,6 +65,7 @@ System:
   name: System
   entities:
     - group.system_status
+    - group.storage
     - group.speedtest
     - group.downloads
     - group.hubs
@@ -69,7 +86,7 @@ Lights:
 
 Climate:
   name: "Climate"
-  icon: mdi:oil-temperature
+  icon: mdi:temperature
   entities:
     - climate.main_floor
     - sensor.main_floor_temperature
@@ -91,11 +108,22 @@ Occupancy:
     - binary_sensor.jordans_room_occupancy
     - binary_sensor.basement_occupancy
 
-Security:
+Access:
   name: "Doors & Windows"
   icon: mdi:glassdoor
   entities:
     - cover.garage_door
+
+Protect:
+  name: "Nest Protect"
+  icon: mdi:nest-protect
+  entities:
+    - sensor.main_floor_nest_protect_battery_health
+    - sensor.main_floor_nest_protect_co_status
+    - sensor.main_floor_nest_protect_smoke_status
+    - sensor.basement_nest_protect_battery_health
+    - sensor.basement_nest_protect_co_status
+    - sensor.basement_nest_protect_smoke_status
 
 ###########################################
 # Local Cards
@@ -119,6 +147,19 @@ Traffic:
     - camera.southland_drive__macleod_trail_s
     - camera.heritage_drive__macleod_trail_s
     - camera.glenmore_trail__crowchild_trail_sw
+
+Calendar:
+  name: Family Calendar
+  entities:
+    - sensor.next_event
+    - sensor.next_event_time
+    - sensor.next_event_location
+
+Holiday:
+  name: Holiday Calendar
+  entities:
+    - sensor.holiday_event
+    - sensor.holiday_event_time
 
 Forecast:
   entities:
@@ -146,8 +187,6 @@ Sun:
 Entertainment:
   entities:
 #    - input_select.harmony
-    - media_player.living_room
-    - media_player.living_room_2
     - sensor.plex
     - sensor.tv_schedule
     - sensor.now_playing
@@ -179,6 +218,15 @@ Downloads:
     - sensor.sonarr_queue
     - sensor.sonarr_wanted
 
+Storage:
+  name: "Storage"
+  entities:
+    - sensor.cpu_load_total
+    - sensor.memory_usage_real
+    - sensor.status_volume_1
+    - sensor.total_size_volume_1
+    - sensor.used_space_volume_1
+
 system_status:
   name: "System Status"
   entities:
@@ -187,5 +235,7 @@ system_status:
     - sensor.hass_release
     - sensor.hass_installed
     - sensor.sd_free_space
-#    - updater.updater
-    - sensor.bad_login
+    - sensor.cpu_use
+    - sensor.ram_use
+    - updater.updater
+    - sensor.login_attempts

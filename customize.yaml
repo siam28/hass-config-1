@@ -11,7 +11,10 @@ group.security:
   order: 4
 group.lights:
   order: 5
-
+group.calendar:
+  order: 6
+group.holiday:
+  order: 7
 
 ###########################################
 # Local Group Order
@@ -38,12 +41,12 @@ group.entertainment:
 
 
 ###########################################
-# Network Group Order
+# Security Group Order
 ###########################################
-#group.#:
-  #order: 1
-#group.#:
-  #order: 2
+group.protect:
+  order: 1
+group.access:
+  order: 2
 #group.#:
   #order: 3
 
@@ -64,6 +67,8 @@ group.hubs:
 ###########################################
 climate.main_floor:
   friendly_name: 'Thermostat'
+sensor.main_floor_humidity:
+  icon: mdi:water-percent
 sensor.bedroom_temperature:
   friendly_name: 'Bedroom'
   icon: mdi:hotel
@@ -113,9 +118,27 @@ binary_sensor.office_occupancy:
   icon: mdi:desktop-mac
 
 ###########################################
+# Calendar Sensors
+###########################################
+sensor.next_event:
+  icon: mdi:calendar
+sensor.next_event_time:
+  icon: mdi:clock
+sensor.next_event_location:
+  icon: mdi:map-marker
+sensor.holiday_event:
+  icon: mdi:calendar
+sensor.holiday_event_time:
+  icon: mdi:clock
+
+###########################################
 # Media Sensors
 ###########################################
 
+media_player.living_room:
+  friendly_name: 'Living Room Plex'
+media_player.living_room_2:
+  friendly_name: 'Living Room Android TV'
 sensor.tv_schedule:
   friendly_name: 'TV Today'
   icon: mdi:television
@@ -127,7 +150,32 @@ sensor.plex:
   friendly_name: 'Plex Activity'
   icon: mdi:plex
 input_select.harmony:
+  friendly_name: 'Harmony'
   icon: mdi:remote
+
+###########################################
+# Nest Sensors
+###########################################
+
+sensor.main_floor_nest_protect_battery_health:
+  friendly_name: 'Main Floor - Battery'
+  icon: mdi:battery-50
+sensor.main_floor_nest_protect_co_status:
+  friendly_name: 'Main Floor - Carbon Monoxide'
+  icon: mdi:gauge
+sensor.main_floor_nest_protect_smoke_status:
+  friendly_name: 'Main Floor - Smoke'
+  icon: mdi:fire
+sensor.basement_nest_protect_battery_health:
+  friendly_name: 'Basement - Battery'
+  icon: mdi:battery-50
+sensor.basement_nest_protect_co_status:
+  friendly_name: 'Basement - Carbon Monoxide'
+  icon: mdi:gauge
+sensor.basement_nest_protect_smoke_status:
+  friendly_name: 'Basement - Smoke'
+  icon: mdi:fire
+
 
 ###########################################
 # Weather Sensors
@@ -223,6 +271,16 @@ sensor.nzbget_uptime:
   friendly_name: 'NZBGet Uptime'
   icon: mdi:timer
 
+sensor.cpu_load_total:
+  friendly_name: 'Processor'
+sensor.memory_usage_real:
+  friendly_name: 'Memory'
+sensor.status_volume_1:
+  friendly_name: 'Volume Status'
+sensor.total_size_volume_1:
+  friendly_name: 'Volume Capacity'
+sensor.used_space_volume_1:
+  friendly_name: 'Volume Used'
 
 sensor.connected_clients:
   friendly_name: 'Connections'
@@ -234,7 +292,18 @@ sensor.hass_release:
   friendly_name: 'Release'
   icon: mdi:github-circle
 sensor.sd_free_space:
+  friendly_name: 'SD Free Space'
   icon: mdi:sd
+sensor.ram_free:
+  friendly_name: 'Memory Free'
+  icon: mdi:memory
+sensor.cpu_use:
+  friendly_name: 'Processor'
+  icon: mdi:chip
+sensor.ram_use:
+  friendly_name: 'Memory Use'
+  icon: mdi:memory
+
 sensor.since_last_boot_templated:
   friendly_name: "Uptime"
   icon: mdi:timer

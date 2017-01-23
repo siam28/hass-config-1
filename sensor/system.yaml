@@ -12,9 +12,9 @@
   name: Login Attempts
   command: "grep -c 'Login attempt' /home/homeassistant/.homeassistant/home-assistant.log"
 
--  platform: command_line
-   command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
-   name: HASS Release
+- platform: command_line
+  command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+  name: HASS Release
 
 - platform: command_line
   command: "df -h | grep root | awk '{print $4}'"
@@ -24,6 +24,9 @@
 - platform: systemmonitor
   resources:
     - type: since_last_boot
+    - type: memory_free
+    - type: memory_use_percent
+    - type: processor_use
 
 - platform: template
   sensors:

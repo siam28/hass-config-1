@@ -12,6 +12,16 @@
   - queue
   days: 1
 
+# - platform: radarr
+#   api_key: !secret radarr_api
+#   host: !secret radarr_address
+#   port: !secret radarr_port
+#   monitored_conditions:
+#   - upcoming
+#   - wanted
+#   - queue
+#   days: 7
+
 - platform: nzbget
   host: !secret nzbget_host
   port: !secret nzbget_port

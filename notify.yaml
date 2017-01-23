@@ -1,0 +1,19 @@
+
+  - platform: joaoapps_join
+    name: join_notify
+    device_id: group.android
+    api_key: !secret join_api
+
+  - platform: slack
+    name: slack_notify
+    api_key: yXMkysNxyCkQsu3BJ4z6
+    default_channel: '#notifications'
+    username: homeassistant
+    icon: ':hass:'
+
+  - platform: nfandroidtv
+    name: Living Room
+    host: 192.168.1.20
+
+  - platform: ecobee
+    name: Thermostat
