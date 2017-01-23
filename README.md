@@ -43,6 +43,7 @@
 - Xiaomi Mi Box
 - Unifi Wireless
 - ecobee3 (6 sensors)
+- Wink 2 Hub
 - Philips Hue Lights
 - Philips Hue Bridge
 - Harmony Companion Hub
