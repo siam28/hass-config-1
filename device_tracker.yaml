@@ -1,5 +1,5 @@
 - platform: unifi
-  track_new_devices: yes
+  track_new_devices: no
   interval_seconds: 12
   consider_home: 130
   host: !secret unifi_ip

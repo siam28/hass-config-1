@@ -11,9 +11,13 @@ default_view:
     - group.holiday
     - group.occupancy
     - group.security
+    - sensor.main_floor_temperature
     - sun.sun
     - sensor.yr_temperature
     - sensor.yr_symbol
+    - device_tracker.pdgmobile
+    - device_tracker.bcgmobile
+    - device_tracker.jabmobile
 
 ###########################################
 # Local Tab
@@ -42,7 +46,7 @@ Media:
   entities:
     - group.entertainment
     - media_player.living_room
-    - media_player.living_room_2
+
 
 ###########################################
 # Security Tab
@@ -239,3 +243,11 @@ system_status:
     - sensor.ram_use
     - updater.updater
     - sensor.login_attempts
+
+###########################################
+# Hidden Groups
+###########################################
+family_devices:
+    - device_tracker.pdgmobile
+    - device_tracker.bcgmobile
+    - device_tracker.jabmobile

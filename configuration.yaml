@@ -30,7 +30,11 @@ recorder:
   purge_days: 30
 logbook:
 logger:
-  default: error
+  default: critical
+  logs:
+    homeassistant.components: info
+    homeassistant.components.device_tracker: critical
+    homeassistant.components.camera: critical
 sun:
 
 ###########################################
@@ -62,7 +66,7 @@ camera: !include camera.yaml
 media_player: !include media_player.yaml
 device_tracker: !include device_tracker.yaml
 notify: !include notify.yaml
-#input_select: !include input_select.yaml
+# input_select: !include input_select.yaml
 #emulated_hue: !include emulated_hue.yaml
 #automation: !include_dir_merge_list automation
 #panel_iframe: !include panel_iframe.yaml

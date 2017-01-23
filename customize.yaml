@@ -136,11 +136,9 @@ sensor.holiday_event_time:
 ###########################################
 
 media_player.living_room:
-  friendly_name: 'Living Room Plex'
-media_player.living_room_2:
-  friendly_name: 'Living Room Android TV'
+  friendly_name: 'Living Room'
 sensor.tv_schedule:
-  friendly_name: 'TV Today'
+  friendly_name: 'Upcoming TV'
   icon: mdi:television
 sensor.current_activity:
   icon: mdi:play-pause
@@ -230,6 +228,16 @@ sensor.home_to_airport:
 sensor.home_to_stoddards:
   icon: mdi:car
 
+###########################################
+# Device Sensors
+###########################################
+
+device_tracker.pdgmobile:
+  friendly_name: 'Paul'
+device_tracker.bcgmobile:
+  friendly_name: 'Beth'
+device_tracker.jabmobile:
+  friendly_name: 'Jordan'
 
 ###########################################
 # System

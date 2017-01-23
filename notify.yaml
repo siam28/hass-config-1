@@ -6,7 +6,7 @@
 
   - platform: slack
     name: slack_notify
-    api_key: yXMkysNxyCkQsu3BJ4z6
+    api_key: !secret slack_api
     default_channel: '#notifications'
     username: homeassistant
     icon: ':hass:'
