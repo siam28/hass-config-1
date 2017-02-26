@@ -9,3 +9,28 @@
   children:
     - media_player.living_room
     - media_player.living_room_2
+    - media_player.living_room_3
+    - media_player.jordan
+    - media_player.beth
+
+#- platform: universal
+#  name: Guest Bedroom
+#  children:
+#    - media_player.guest_bedroom
+
+
+- platform: universal
+  name: Remote
+  children:
+    - media_player.plex_web_chrome
+    - media_player.tablet
+    - media_player.chris
+    - media_player.craigenator
+    - media_player.eric1h
+    - media_player.fetachz
+    - media_player.craigenator
+    - media_player.JscoLP
+    - media_player.lennonc
+    - media_player.osterholta
+    - media_player.tohr@yahoo.com
+    - media_player.vmmeup

@@ -1,0 +1,19 @@
+ - alias: Z-Wave network is complete
+   trigger:
+     platform: event
+     event_type: zwave.network_complete
+
+ - alias: Z-Wave network is ready
+   trigger:
+     platform: event
+     event_type: zwave.network_ready
+
+ - alias: Z-Wave network is starting
+   trigger:
+     platform: event
+     event_type: zwave.network_start
+
+ - alias: Z-Wave network is stopping
+   trigger:
+     platform: event
+     event_type: zwave.network_stop

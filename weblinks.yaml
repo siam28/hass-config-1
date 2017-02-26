@@ -1,0 +1,4 @@
+entities:
+  - name: Forecast
+    url: !secret wunderground_forcast_url
+    icon: mdi:web

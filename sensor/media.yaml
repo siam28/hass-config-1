@@ -26,3 +26,9 @@
     now_playing:
       value_template: '{{ states.media_player.living_room.attributes.media_title }}'
       friendly_name: 'Now Playing'
+
+- platform: template
+  sensors:
+    remote_playing:
+      value_template: '{{ states.media_player.remote.attributes.media_title }}'
+      friendly_name: 'Playing Remote'

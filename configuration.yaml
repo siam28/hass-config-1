@@ -40,6 +40,7 @@ sun:
 ###########################################
 # Components
 ###########################################
+
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret
@@ -54,7 +55,8 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 wink:
-  access_token: !secret wink_token
+  email: !secret email_account
+  password: !secret wink_password
 
 ###########################################
 # Includes
@@ -66,8 +68,9 @@ camera: !include camera.yaml
 media_player: !include media_player.yaml
 device_tracker: !include device_tracker.yaml
 notify: !include notify.yaml
+events: !include events.yaml
+weblink: !include weblinks.yaml
+automation: !include_dir_merge_list automation
 # input_select: !include input_select.yaml
-#emulated_hue: !include emulated_hue.yaml
-#automation: !include_dir_merge_list automation
-#panel_iframe: !include panel_iframe.yaml
-#script: !include script.yaml
+# emulated_hue: !include emulated_hue.yaml
+# script: !include script.yaml

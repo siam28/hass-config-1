@@ -5,25 +5,23 @@ group.climate:
   order: 1
 group.rooms:
   order: 2
-group.occupancy:
+group.presence:
   order: 3
-group.security:
+group.occupancy:
   order: 4
-group.lights:
+group.security:
   order: 5
-group.calendar:
+group.lights:
   order: 6
-group.holiday:
-  order: 7
 
 ###########################################
 # Local Group Order
 ###########################################
-group.travel:
+group.forecast:
   order: 1
 group.sun:
   order: 2
-group.forecast:
+group.travel:
   order: 3
 group.traffic:
   order: 4
@@ -66,7 +64,10 @@ group.hubs:
 # Home Sensors
 ###########################################
 climate.main_floor:
-  friendly_name: 'Thermostat'
+  friendly_name: 'Main Floor'
+sensor.main_floor_temperature:
+  friendly_name: 'Inside'
+  icon: mdi:nest-thermostat
 sensor.main_floor_humidity:
   icon: mdi:water-percent
 sensor.bedroom_temperature:
@@ -83,7 +84,7 @@ sensor.jordans_room_temperature:
   icon: mdi:hotel
 sensor.office_temperature:
   friendly_name: 'Office'
-  icon: mdi:desktop-mac
+  icon: mdi:monitor-multiple
 light.pauls_light:
   friendly_name: 'Paul'
 light.beths_light:
@@ -95,6 +96,9 @@ light.notify:
 light.hgrp0000000014:
   friendly_name: 'Family Room'
   icon: mdi:sofa
+light.office:
+  friendly_name: 'Office'
+  icon: mdi:monitor-multiple
 cover.garage_door:
   friendly_name: 'Garage'
   icon: mdi:car
@@ -115,7 +119,7 @@ binary_sensor.main_floor_occupancy:
   icon: mdi:home
 binary_sensor.office_occupancy:
   friendly_name: 'Office'
-  icon: mdi:desktop-mac
+  icon: mdi:monitor-multiple
 
 ###########################################
 # Calendar Sensors
@@ -144,6 +148,8 @@ sensor.current_activity:
   icon: mdi:play-pause
 sensor.now_playing:
   icon: mdi:play-circle
+sensor.remote_playing:
+  icon: mdi:play-circle-outline
 sensor.plex:
   friendly_name: 'Plex Activity'
   icon: mdi:plex
@@ -222,11 +228,15 @@ sensor.air_quality:
 # Travel Sensors
 ###########################################
 sensor.home_to_downtown:
-  icon: mdi:car
+  icon: mdi:domain
 sensor.home_to_airport:
-  icon: mdi:car
+  icon: mdi:airplane
 sensor.home_to_stoddards:
-  icon: mdi:car
+  icon: mdi:account-multiple
+sensor.home_to_south_health_campus:
+  icon: mdi:hospital-building
+sensor.home_to_doctors:
+  icon: mdi:medical-bag
 
 ###########################################
 # Device Sensors
@@ -286,9 +296,9 @@ sensor.memory_usage_real:
 sensor.status_volume_1:
   friendly_name: 'Volume Status'
 sensor.total_size_volume_1:
-  friendly_name: 'Volume Capacity'
+  friendly_name: 'Capacity'
 sensor.used_space_volume_1:
-  friendly_name: 'Volume Used'
+  friendly_name: 'Used'
 
 sensor.connected_clients:
   friendly_name: 'Connections'

@@ -25,6 +25,8 @@
 - platform: nzbget
   host: !secret nzbget_host
   port: !secret nzbget_port
+  username: !secret nzbget_username
+  password: !secret nzbget_password
   monitored_variables:
   - download_rate
   - article_cache
