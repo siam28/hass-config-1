@@ -26,11 +26,11 @@
 - The *System* group is for Home Infrastructure related items and status. 
 
 ## Screenshots
-![Home](https://www.dropbox.com/s/sa5kjopf8k28dre/home.png?raw=1)
-![Local](https://www.dropbox.com/s/0q1zrq6zsszji5d/local.png?raw=1)
-![Security](https://www.dropbox.com/s/2pjkwkxaqbre601/security.png?raw=1)
-![Media](https://www.dropbox.com/s/56xao6x4h7kh9sa/media.png?raw=1)
-![System](https://www.dropbox.com/s/xaw8fmph61ky3xx/system.png?raw=1)
+![Home](https://www.dropbox.com/s/3lqtjwiwm8ey9bf/home.png?raw=1)
+![Local](https://www.dropbox.com/s/u1x4gwtjictr9fw/local.png?raw=1)
+![Security](https://www.dropbox.com/s/ej6h4fetb97rzjn/security.png?raw=1)
+![Media](https://www.dropbox.com/s/3ldesbaec5up3mu/media.png?raw=1)
+![System](https://www.dropbox.com/s/u6olej0dn62pmxi/system.png?raw=1)
 
 
 ## Acknowledgments
