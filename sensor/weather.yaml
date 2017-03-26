@@ -31,7 +31,7 @@
 - platform: template
   sensors:
     uv_rating_template:
-      value_template: "{% if states('sensor.pws_uv') | float <= 2 %}Low{% elif states('sensor.pws_uv') | float >= 3 %}Moderate{% elif states('sensor.pws_uv') | float >= 6 %}High{% elif states('sensor.pws_uv') | float >= 9 %}Extreme{% else %}n/a{% endif %}"  
+      value_template: "{% if states('sensor.pws_uv') | float <= 2 %}Low{% elif states('sensor.pws_uv') | float >= 3 %}Moderate{% elif states('sensor.pws_uv') | float >= 6 %}High{% elif states('sensor.pws_uv') | float >= 9 %}Extreme{% else %}n/a{% endif %}"
 
 - platform: template
   sensors:
@@ -47,8 +47,10 @@
       friendly_name: 'Sunset'
 
 - platform: waqi
+  token: !secret waqi_token
   locations:
     - calgary
+
 - platform: template
   sensors:
     air_quality:

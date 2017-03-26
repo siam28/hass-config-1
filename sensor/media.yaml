@@ -24,8 +24,15 @@
 - platform: template
   sensors:
     now_playing:
-      value_template: '{{ states.media_player.living_room.attributes.media_title }}'
+      value_template: '{{ states.media_player.living_room_tv.attributes.media_title }}'
       friendly_name: 'Now Playing'
+
+- platform: template
+  sensors:
+    music_playing:
+#      value_template: '{{ states.media_player.office_speaker.attributes.media_title }}'
+      value_template: '{{ states.media_player.office_speaker.attributes.media_title }} {{ states.media_player.office_speaker.attributes.media_artist }}'
+      friendly_name: 'Music Playing'
 
 - platform: template
   sensors:

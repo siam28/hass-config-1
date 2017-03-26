@@ -4,6 +4,7 @@
   consider_home: 130
   host: !secret unifi_ip
   port: 8443
+  verify_ssl: false
   username: !secret unifi_username
   password: !secret unifi_password
 # - platform: bluetooth_tracker

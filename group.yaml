@@ -9,7 +9,9 @@ default_view:
     - group.lights
     - group.climate
     - group.occupancy
+    - group.secure
     - group.security
+    - group.entertainment
     - sensor.main_floor_temperature
     - sun.sun
     - device_tracker.pdgmobile
@@ -48,8 +50,9 @@ Media:
   name: Media
   entities:
     - group.entertainment
-    - media_player.living_room
-    - media_player.remote
+    - media_player.office_speaker
+    - media_player.living_room_speaker
+    - media_player.living_room_tv
 
 ###########################################
 # Security Tab
@@ -60,6 +63,7 @@ Security:
   name: Security
   entities:
     - group.access
+    - group.yard
     - group.protect
 
 
@@ -114,6 +118,13 @@ Occupancy:
     - binary_sensor.bedroom_occupancy
     - binary_sensor.jordans_room_occupancy
     - binary_sensor.basement_occupancy
+
+Secure:
+  name: "Safety & Security"
+  icon: mdi:security-home
+  entities:
+    - binary_sensor.front_gate_opened
+    - binary_sensor.rear_gate_opened
 
 ###########################################
 # Local Cards
@@ -181,9 +192,16 @@ Forecast:
 
 Access:
   name: "Doors & Windows"
-  icon: mdi:glassdoor
+  icon: mdi:garage
   entities:
     - cover.garage_door
+
+Yard:
+  name: "Yard"
+  icon: mdi:gate
+  entities:
+    - binary_sensor.front_gate_opened
+    - binary_sensor.rear_gate_opened
 
 Protect:
   name: "Nest Protect"
@@ -205,7 +223,8 @@ Entertainment:
     - sensor.plex
     - sensor.tv_schedule
     - sensor.now_playing
-    - sensor.remote_playing
+    - sensor.music_playing
+#    - sensor.remote_playing
 
 ###########################################
 # System Cards
@@ -214,8 +233,8 @@ Entertainment:
 Hubs:
   name: "Hubs"
   entities:
-    - binary_sensor.philips_hue_hub
-    - binary_sensor.wink_hub
+    - binary_sensor.phillipshue
+    - binary_sensor.wink
 
 Speedtest:
   name: "Internet"

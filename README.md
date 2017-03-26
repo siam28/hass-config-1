@@ -12,7 +12,7 @@
 * v0.6 - Cleanup, Speedtest, Fix Installed Version and more efficient Release detection
 * v0.7 - Fix for Synology, Added Nest Protects
 * v0.8 - Presence detection added, Universal Media Player and Log Tuning and Added to README
-
+* v0.9 - Motion Sensors, Gate Sensors, Google Home Speakers
 
 ## Issues
 * spaces Paul, not tabs...
@@ -46,6 +46,7 @@
 - Wink 2 Hub
 - Philips Hue Lights
 - Philips Hue Bridge
+- GOCONTROL WNK01-21KIT 
 - Harmony Companion Hub
 - Plex Media Server
 - Synology NAS

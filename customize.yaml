@@ -101,7 +101,7 @@ light.office:
   icon: mdi:monitor-multiple
 cover.garage_door:
   friendly_name: 'Garage'
-  icon: mdi:car
+  icon: mdi:garage
 binary_sensor.basement_occupancy:
   friendly_name: 'Basement'
   icon: mdi:sofa
@@ -120,6 +120,17 @@ binary_sensor.main_floor_occupancy:
 binary_sensor.office_occupancy:
   friendly_name: 'Office'
   icon: mdi:monitor-multiple
+
+###########################################
+# Home Sensors
+###########################################
+
+binary_sensor.front_gate_opened:
+  friendly_name: 'Front Gate'
+  icon: mdi:gate
+binary_sensor.rear_gate_opened:
+  friendly_name: 'Rear Gate'
+  icon: mdi:gate
 
 ###########################################
 # Calendar Sensors
@@ -141,6 +152,10 @@ sensor.holiday_event_time:
 
 media_player.living_room:
   friendly_name: 'Living Room'
+media_player.office_speaker:
+  friendly_name: 'Office Speaker'
+media_player.living_room_speaker:
+  friendly_name: 'Living Room Speaker'
 sensor.tv_schedule:
   friendly_name: 'Upcoming TV'
   icon: mdi:television
@@ -148,6 +163,8 @@ sensor.current_activity:
   icon: mdi:play-pause
 sensor.now_playing:
   icon: mdi:play-circle
+sensor.music_playing:
+  icon: mdi:music-circle
 sensor.remote_playing:
   icon: mdi:play-circle-outline
 sensor.plex:
@@ -252,10 +269,12 @@ device_tracker.jabmobile:
 ###########################################
 # System
 ###########################################
-binary_sensor.philips_hue_hub:
+binary_sensor.phillipshue:
   friendly_name: 'Philips Hue'
-binary_sensor.wink_hub:
+  icon: mdi:switch
+binary_sensor.wink:
   friendly_name: 'Wink'
+  icon: mdi:switch
 
 sensor.speedtest_download:
   friendly_name: 'Download'

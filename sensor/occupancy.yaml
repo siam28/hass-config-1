@@ -1,0 +1,87 @@
+###########################################
+# Room Sensors
+###########################################
+
+- platform: template
+  sensors:
+    living_room_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.living_room_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.living_room_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    main_floor_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.main_floor_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.main_floor_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    office_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.office_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.office_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    bedroom_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.bedroom_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.bedroom_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    bedroom_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.bedroom_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.bedroom_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    jordans_room_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.jordans_room_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.jordans_room_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    basement_occupancy_template:
+        value_template: >-
+          {%- if is_state("binary_sensor.basement_occupancy", "on") %}
+              Occupied
+          {%- elif is_state("binary_sensor.basement_occupancy", "off") %}
+              Unoccupied
+          {%- else %}
+              None
+          {%- endif %}
