@@ -1,0 +1,27 @@
+###########################################
+# Yard Sensors
+###########################################
+
+- platform: template
+  sensors:
+    front_gate_opened:
+        value_template: >-
+          {%- if is_state("binary_sensor.front_gate_opened", "on") %}
+              Open
+          {%- elif is_state("binary_sensor.front_gate_opened", "off") %}
+              Closed
+          {%- else %}
+              None
+          {%- endif %}
+
+- platform: template
+  sensors:
+    rear_gate_opened:
+        value_template: >-
+          {%- if is_state("binary_sensor.rear_gate_opened", "on") %}
+              Open
+          {%- elif is_state("binary_sensor.rear_gate_opened", "off") %}
+              Closed
+          {%- else %}
+              None
+          {%- endif %}

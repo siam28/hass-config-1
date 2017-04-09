@@ -1,9 +1,12 @@
-###########################################
-# CO Sensors
-###########################################
 
+
+###########################################
+# Carbon Monoxide Sensor Grouping
+###########################################
 
 binary_sensor:
+
+
   - platform: template
     sensors:
       co:
@@ -11,14 +14,18 @@ binary_sensor:
         device_class: 'gas'
         value_template: >-
           {%- if is_state("sensor.main_floor_nest_protect_co_status", "Ok")
-              and is_state("sensor.basement_nest_protect_co_status", "Ok")
-          Off
+              and is_state("sensor.basement_nest_protect_co_status", "Ok") -%}
+          Safe
           {%- else -%}
           On
           {%- endif %}
         entity_id:
           - sensor.main_floor_nest_protect_co_status
           - sensor.basement_nest_protect_co_status
+
+###########################################
+# Smoke Sensor Grouping
+###########################################
 
   - platform: template
     sensors:
@@ -27,28 +34,32 @@ binary_sensor:
         device_class: 'smoke'
         value_template: >-
           {%- if is_state("sensor.main_floor_nest_protect_smoke_status", "Ok")
-              and is_state("sensor.basement_nest_protect_smoke_status", "Ok")
-          Off
+              and is_state("sensor.basement_nest_protect_smoke_status", "Ok") -%}
+          Clear
           {%- else -%}
-          On
+          Smoke Detected
           {%- endif %}
         entity_id:
           - sensor.main_floor_nest_protect_smoke_status
           - sensor.basement_nest_protect_smoke_status
 
 
+###########################################
+# Nest Protect Online Grouping
+###########################################
+
   - platform: template
     sensors:
-      gates:
-        friendly_name: 'Gate'
-        device_class: 'opening'
+      nest_protects_online:
+        friendly_name: 'Nest Protects'
+        device_class: 'connectivity'
         value_template: >-
-          {%- if is_state("binary_sensor.front_gate_opened", "off")
-              and is_state("binary_sensor.rear_gate_opened", "off")
-          Off
+          {%- if is_state("binary_sensor.main_floor_nest_protect_online", "on")
+              and is_state("binary_sensor.basement_nest_protect_online", "on") -%}
+          Connected
           {%- else -%}
-          On
+          Offline
           {%- endif %}
         entity_id:
-          - binary_sensor.front_gate_opened
-          - binary_sensor.rear_gate_opened
+          - binary_sensor.main_floor_nest_protect_online
+          - binary_sensor.basement_nest_protect_online

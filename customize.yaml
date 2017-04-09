@@ -70,6 +70,9 @@ sensor.main_floor_temperature:
   icon: mdi:nest-thermostat
 sensor.main_floor_humidity:
   icon: mdi:water-percent
+sensor.front_porch_temperature:
+  friendly_name: 'Front Porch'
+  icon: mdi:home
 sensor.bedroom_temperature:
   friendly_name: 'Bedroom'
   icon: mdi:hotel
@@ -102,33 +105,66 @@ light.office:
 cover.garage_door:
   friendly_name: 'Garage'
   icon: mdi:garage
+
+sensor.garage_door:
+  friendly_name: 'Garage'
+  icon: mdi:garage
+
 binary_sensor.basement_occupancy:
   friendly_name: 'Basement'
+  icon: mdi:sofa
+binary_sensor.living_room_occupancy:
+  friendly_name: 'Living Room'
   icon: mdi:sofa
 binary_sensor.bedroom_occupancy:
   friendly_name: 'Bedroom'
   icon: mdi:hotel
-binary_sensor.jordans_room_occupancy:
-  friendly_name: 'Jordan'
-  icon: mdi:hotel
-binary_sensor.living_room_occupancy:
-  friendly_name: 'Living Room'
-  icon: mdi:sofa
 binary_sensor.main_floor_occupancy:
   friendly_name: 'Main Floor'
   icon: mdi:home
 binary_sensor.office_occupancy:
   friendly_name: 'Office'
   icon: mdi:monitor-multiple
+binary_sensor.jordans_room_occupancy:
+  friendly_name: 'Jordan'
+  icon: mdi:hotel
+
+
+sensor.basement_occupancy:
+  friendly_name: 'Basement'
+  icon: mdi:sofa
+sensor.living_room_occupancy:
+  friendly_name: 'Living Room'
+  icon: mdi:sofa
+sensor.bedroom_occupancy:
+  friendly_name: 'Bedroom'
+  icon: mdi:hotel
+sensor.main_floor_occupancy:
+  friendly_name: 'Main Floor'
+  icon: mdi:home
+sensor.office_occupancy:
+  friendly_name: 'Office'
+  icon: mdi:monitor-multiple
+sensor.jordans_room_occupancy:
+  friendly_name: 'Jordan'
+  icon: mdi:hotel
+
 
 ###########################################
-# Home Sensors
+# Yard Sensors
 ###########################################
 
 binary_sensor.front_gate_opened:
   friendly_name: 'Front Gate'
   icon: mdi:gate
 binary_sensor.rear_gate_opened:
+  friendly_name: 'Rear Gate'
+  icon: mdi:gate
+
+sensor.front_gate_opened:
+  friendly_name: 'Front Gate'
+  icon: mdi:gate
+sensor.rear_gate_opened:
   friendly_name: 'Rear Gate'
   icon: mdi:gate
 
@@ -275,6 +311,13 @@ binary_sensor.phillipshue:
 binary_sensor.wink:
   friendly_name: 'Wink'
   icon: mdi:switch
+sensor.phillipshue_update_needed:
+  friendly_name: 'Philips Hue'
+  icon: mdi:switch
+sensor.wink_update_needed:
+  friendly_name: 'Wink'
+  icon: mdi:switch
+
 
 sensor.speedtest_download:
   friendly_name: 'Download'

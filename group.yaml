@@ -12,13 +12,12 @@ default_view:
     - group.secure
     - group.security
     - group.entertainment
-    - sensor.main_floor_temperature
-    - sun.sun
     - device_tracker.pdgmobile
     - device_tracker.bcgmobile
     - device_tracker.jabmobile
     - sensor.yr_temperature
-    - sensor.yr_symbol
+    - sensor.main_floor_temperature
+
 
 ###########################################
 # Local Tab
@@ -33,13 +32,6 @@ Local:
     - group.forecast
     - group.traffic
     - group.sun
-    - device_tracker.pdgmobile
-    - device_tracker.bcgmobile
-    - device_tracker.jabmobile
-    - sensor.main_floor_temperature
-    - sensor.yr_temperature
-    - sensor.yr_humidity
-    - sensor.yr_symbol
 
 ###########################################
 # Media Tab
@@ -102,6 +94,7 @@ Climate:
   entities:
     - climate.main_floor
     - sensor.main_floor_humidity
+    - sensor.front_porch_temperature
     - sensor.living_room_temperature
     - sensor.office_temperature
     - sensor.jordans_room_temperature
@@ -112,19 +105,20 @@ Occupancy:
   name: "Occupancy"
   icon: mdi:person
   entities:
-    - binary_sensor.living_room_occupancy
-    - binary_sensor.main_floor_occupancy
-    - binary_sensor.office_occupancy
-    - binary_sensor.bedroom_occupancy
-    - binary_sensor.jordans_room_occupancy
-    - binary_sensor.basement_occupancy
+    - sensor.living_room_occupancy
+    - sensor.main_floor_occupancy
+    - sensor.office_occupancy
+    - sensor.bedroom_occupancy
+    - sensor.jordans_room_occupancy
+    - sensor.basement_occupancy
 
 Secure:
   name: "Safety & Security"
   icon: mdi:security-home
   entities:
-    - binary_sensor.front_gate_opened
-    - binary_sensor.rear_gate_opened
+    - sensor.front_gate_opened
+    - sensor.rear_gate_opened
+    - sensor.garage_door
 
 ###########################################
 # Local Cards
@@ -200,8 +194,8 @@ Yard:
   name: "Yard"
   icon: mdi:gate
   entities:
-    - binary_sensor.front_gate_opened
-    - binary_sensor.rear_gate_opened
+    - sensor.front_gate_opened
+    - sensor.rear_gate_opened
 
 Protect:
   name: "Nest Protect"
@@ -233,8 +227,8 @@ Entertainment:
 Hubs:
   name: "Hubs"
   entities:
-    - binary_sensor.phillipshue
-    - binary_sensor.wink
+    - sensor.phillipshue_update_needed
+    - sensor.wink_update_needed
 
 Speedtest:
   name: "Internet"
