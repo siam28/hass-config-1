@@ -1,0 +1,37 @@
+###########################################
+# Philips Hue Sensors
+###########################################
+
+- platform: template
+  sensors:
+    hue_status:
+        value_template: >-
+          {%- if is_state("binary_sensor.phillipshue", "on") %}
+              Online
+          {%- elif is_state("binary_sensor.phillipshue", "off") %}
+              Offline
+          {%- else %}
+              Error
+          {%- endif %}
+
+- platform: template
+  sensors:
+    hue_firmware_version:
+        value_template: '{{ states.binary_sensor.phillipshue.attributes["firmware version"] }}'
+
+- platform: template
+  sensors:
+    hue_firmware_state:
+        value_template: '{{ states.binary_sensor.phillipshue.attributes["update needed"] }}'
+
+- platform: template
+  sensors:
+    hue_firmware_update_status:
+        value_template: >-
+          {%- if is_state("sensor.hue_firmware_state", "False") %}
+              Current
+          {%- elif is_state("sensor.hue_firmware_state", "True") %}
+              Update Available
+          {%- else %}
+              Error
+          {%- endif %}

@@ -227,8 +227,10 @@ Entertainment:
 Hubs:
   name: "Hubs"
   entities:
-    - sensor.phillipshue_update_needed
-    - sensor.wink_update_needed
+    - sensor.wink_status
+    - sensor.wink_firmware_update_status
+    - sensor.hue_status
+    - sensor.hue_firmware_update_status
 
 Speedtest:
   name: "Internet"

@@ -305,19 +305,19 @@ device_tracker.jabmobile:
 ###########################################
 # System
 ###########################################
-binary_sensor.phillipshue:
-  friendly_name: 'Philips Hue'
-  icon: mdi:switch
-binary_sensor.wink:
+sensor.wink_status:
   friendly_name: 'Wink'
   icon: mdi:switch
-sensor.phillipshue_update_needed:
-  friendly_name: 'Philips Hue'
-  icon: mdi:switch
-sensor.wink_update_needed:
-  friendly_name: 'Wink'
-  icon: mdi:switch
+sensor.wink_firmware_update_status:
+  friendly_name: 'Wink Firmware Status'
+  icon: mdi:file-check
 
+sensor.hue_status:
+  friendly_name: 'Hue'
+  icon: mdi:switch
+sensor.hue_firmware_update_status:
+  friendly_name: 'Hue Firmware Status'
+  icon: mdi:file-check
 
 sensor.speedtest_download:
   friendly_name: 'Download'

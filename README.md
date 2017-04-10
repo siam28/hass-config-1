@@ -14,6 +14,7 @@
 * v0.8 - Presence detection added, Universal Media Player and Log Tuning and Added to README
 * v0.9 - Motion Sensors, Gate Sensors, Google Home Speakers
 * v0.91 - Custom Sensors for Garage Door, Gates, Occupancy
+* v0.92 - Resolved status and firmware detection on Hubs
 
 ## Issues
 * spaces Paul, not tabs...
