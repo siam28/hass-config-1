@@ -30,10 +30,9 @@
 ## Screenshots
 ![Home](https://www.dropbox.com/s/3lqtjwiwm8ey9bf/home.png?raw=1)
 ![Local](https://www.dropbox.com/s/u1x4gwtjictr9fw/local.png?raw=1)
-![Security](https://www.dropbox.com/s/ej6h4fetb97rzjn/security.png?raw=1)
 ![Media](https://www.dropbox.com/s/3ldesbaec5up3mu/media.png?raw=1)
 ![System](https://www.dropbox.com/s/u6olej0dn62pmxi/system.png?raw=1)
-
+![Security](https://www.dropbox.com/s/ej6h4fetb97rzjn/security.png?raw=1)
 
 ## Acknowledgments
 * Hat tip to [jtscott] (https://github.com/jtscott/hass-config)
